@@ -13,6 +13,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Gotu&display=swap" rel="stylesheet">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/github-calendar-responsive.css"/>
 
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -27,8 +28,7 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
-	<!-- slick Slider -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+	<!-- Github -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
 
 	</head>
@@ -368,41 +368,18 @@
 		</div>
 	</div>
 
-	<div id="fh5co-blog" style="background: linear-gradient( to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(images/raised-building-frame-169647.jpg); background-size: cover;">
-		<div class="container" style="color: #fff !important;">
+	<div id="fh5co-blog" >
+		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2 style="color: #fff !important;">Happy Client Says</h2>
+					<h2>My Github Contributions</h2>
 				</div>
 			</div>
-			<div class="row text-center mt-4 px-4">
+			<div class="row text-center mt-4 px-4 animate-box">
 				<div class="col">
-				  <div class="slider">
-					<div>
-					  <blockquote class="blockquote">
-						<p class="mb-0">
-						  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quaerat.
-						</p>
-						<footer class="blockquote-footer">Brian Roberts</footer>
-					  </blockquote>
+					<div class="calendar">
+						
 					</div>
-					<div>
-					  <blockquote class="blockquote">
-						<p class="mb-0">
-						  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quaerat.
-						</p>
-						<footer class="blockquote-footer">Dave Stephenson</footer>
-					  </blockquote>
-					</div>
-					<div>
-					  <blockquote class="blockquote">
-						<p class="mb-0">
-						  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quaerat.
-						</p>
-						<footer class="blockquote-footer">Mark Malavsky</footer>
-					  </blockquote>
-					</div>
-				  </div>
 				</div>
 			  </div>
 		</div>
@@ -425,24 +402,26 @@
 		<div class="container">
 			<div class="row">
 				<h2 class="text-center" style="font-weight: 600 !important; font-size: 45px; margin-bottom: 50px;">Contact</h2>
-				<div class="col-md-8 col-md-offset-2">
-					<div class="form-group">
-						<input type="text" id="fname" class="form-control" placeholder="Your name">
+				<form name="contact" method="POST" data-netlify="true">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<input type="text" name="name" class="form-control" placeholder="Your name">
+						</div>
 					</div>
-				</div>
-				<div class="col-md-8 col-md-offset-2">
-					<div class="form-group">
-						<input type="text" id="email" class="form-control" placeholder="Your email address">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<input type="email" name="email" class="form-control" placeholder="Your email address">
+						</div>
 					</div>
-				</div>
-				<div class="col-md-8 col-md-offset-2">
-					<div class="form-group">
-						<textarea name="message" id="message" rows="8" class="form-control" placeholder="Say something about us"></textarea>
+					<div class="col-md-8 col-md-offset-2">
+						<div class="form-group">
+							<textarea name="message" id="message" rows="8" class="form-control" placeholder="Your Message"></textarea>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-8 col-md-offset-2">
-					<input type="submit" value="Send Message" class="btn btn-primary">
-				</div>
+					<div class="col-md-8 col-md-offset-2">
+						<button type="submit" class="btn btn-primary">Send Message</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -480,15 +459,14 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	<!-- Slick Slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-    <script>
-      $('.slider').slick({
-        infinite: true,
-        slideToShow: 1,
-        slideToScroll: 1
-      });
-    </script>
+	<!-- Github -->
+	<!-- <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script> -->
+	<script src="js/github-calendar.min.js"></script>
+	<script>
+		GitHubCalendar(".calendar", "meinjam");
+		// or enable responsive functionality
+		GitHubCalendar(".calendar", "meinjam", { responsive: true });
+	</script>
 
 	</body>
 </html>
