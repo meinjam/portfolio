@@ -1313,6 +1313,15 @@ input[type="text"] {
   opacity: 0;
 }
 
+.work-btn{
+  background: #05386b;
+  border: none;
+  color: #5cdb95;
+}
 
+.mixitup-control-active{
+  background-color: #fff;
+  color: #000;
+}
 
 /*# sourceMappingURL=style.css.map */

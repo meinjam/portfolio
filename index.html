@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head>
 	<meta charset="utf-8">
@@ -298,12 +298,20 @@
 	<div id="fh5co-work" class="fh5co-bg-dark">
 		<div class="container">
 			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" style="margin-bottom: 0px !important;">
 					<h2 style="color: #05386b !important;">My Work</h2>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-3 text-center col-padding animate-box">
+			<div class="row" style="margin-bottom: 3rem;">
+				<div class="text-center">
+					<button type="button" class="btn btn-default work-btn" data-filter="all">All</button>
+					<button type="button" class="btn btn-default work-btn" data-filter=".psd">Html5</button>
+					<button type="button" class="btn btn-default work-btn" data-filter=".javascript">Js</button>
+					<button type="button" class="btn btn-default work-btn" data-filter=".php">PHP</button>
+				</div>
+			</div>
+			<div class="row work-container">
+				<div class="col-md-3 text-center col-padding mix php">
 					<a href="https://github.com/meinjam/ja-cms" target="_blank" class="work" style="background-image: url(images/portfolio-1.png);">
 						<div class="desc">
 							<h3>CMS Project</h3>
@@ -311,7 +319,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
+				<div class="col-md-3 text-center col-padding mix psd">
 					<a href="https://meinjam.github.io/omicorn/" target="_blank" class="work" style="background-image: url(images/portfolio-2.png);">
 						<div class="desc">
 							<h3>Omicron</h3>
@@ -319,15 +327,15 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/meinjam/vue-todo_app" target="_blank" class="work" style="background-image: url(images/portfolio-3.png);">
+				<div class="col-md-3 text-center col-padding mix javascript php">
+					<a href="http://laravue-todo-ih.herokuapp.com/" target="_blank" class="work" style="background-image: url(images/portfolio-3.png);">
 						<div class="desc">
-							<h3>Vue Todo App</h3>
+							<h3>LaraVue Todo App</h3>
 							<span>using &mdash; Vue.js</span>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
+				<div class="col-md-3 text-center col-padding mix psd">
 					<a href="https://meinjam.github.io/psdtohtml/" target="_blank" class="work" style="background-image: url(images/portfolio-4.png);">
 						<div class="desc">
 							<h3>Zoom</h3>
@@ -335,7 +343,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
+				<div class="col-md-3 text-center col-padding mix javascript">
 					<a href="https://mi-github.netlify.app/" target="_blank" class="work" style="background-image: url(images/portfolio-5.PNG);">
 						<div class="desc">
 							<h3>Github Finder</h3>
@@ -343,23 +351,23 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/meinjam/laravel7-cms_blog" target="_blank" class="work" style="background-image: url(images/portfolio-6.jpg);">
+				<div class="col-md-3 text-center col-padding mix php">
+					<a href="https://github.com/meinjam/laravel-7_story-share_app" target="_blank" class="work" style="background-image: url(images/portfolio-6.jpg);">
 						<div class="desc">
-							<h3>Blog Site</h3>
+							<h3>Story Share App</h3>
 							<span>using &mdash; Laravel 7</span>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="https://github.com/meinjam/Laravel6-multiseller_ecommerce" target="_blank" class="work" style="background-image: url(images/portfolio-7.PNG);">
+				<div class="col-md-3 text-center col-padding mix php">
+					<a href="https://github.com/meinjam/l6-ecommerce" target="_blank" class="work" style="background-image: url(images/portfolio-7.jpg);">
 						<div class="desc">
-							<h3>E-Commerce (under process)</h3>
+							<h3>E-Commerce</h3>
 							<span>using &mdash; Laravel 7</span>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
+				<div class="col-md-3 text-center col-padding mix php">
 					<a href="https://github.com/meinjam/l7-instagram_clone" target="_blank" class="work" style="background-image: url(images/portfolio-8.jpg);">
 						<div class="desc">
 							<h3>Instagram Clone</h3>
@@ -419,7 +427,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Hire Me!</h2>
-					<p>If you like my work and want to run your new project by me please contact. Also if you have any query don't hesitate to ask me. I will try to my best.</p>
+					<p>If you like my work and want to run your new project by me please contact. Also if you have any query don't hesitate to ask me. I will try my best.</p>
 					<p><a href="mailto: injam.cse@gmail.com" class="btn btn-default btn-lg">Contact</a></p>
 				</div>
 			</div>
@@ -486,6 +494,14 @@
 	
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<!-- MixitUp -->
+	<script src="js/mixitup.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var mixer = mixitup(".work-container");
+		})
+	</script>
 
 	<!-- Github -->
 	<!-- <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script> -->
