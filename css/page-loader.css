@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lobster&display=swap');
+
+.loader {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background: #62db95;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader div {
+    margin: 0 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 30px;
+    /* font-weight: bold; */
+    /* color: #62db95; */
+    color: #05386b;
+    border-radius: 50%;
+    animation: bouncer 0.5s cubic-bezier(.19, .57, .3, .98) infinite alternate;
+    font-family: "Kaushan Script", cursive;
+    text-transform: lowercase;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.loader div:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.loader div:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bouncer {
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-100px)
+    }
+}
+
+.disppear {
+    animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
